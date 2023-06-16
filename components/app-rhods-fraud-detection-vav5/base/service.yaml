@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: app-rhods-fraud-detection-vav5
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: app-rhods-fraud-detection-vav5
+    app.kubernetes.io/part-of: rhods-fraud-detection
+  name: app-rhods-fraud-detection-vav5
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: app-rhods-fraud-detection-vav5
+status:
+  loadBalancer: {}
